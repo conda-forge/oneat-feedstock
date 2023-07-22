@@ -1,5 +1,5 @@
 {% set name = "oneat" %}
-{% set version = "6.0.0" %}
+{% set version = "6.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/oneat-{{ version }}.tar.gz
-  sha256: 026a095eac990c08e1454d627bc8cec6e94dc2f08ca3ec9ac1154f9922eb2852
+  sha256: 488f7e98c33f0cff3e73e3b3ec62cd4c63d2660621d7a48a34f1e5f7ecccaaa6
 
 build:
   noarch: python
@@ -37,7 +37,7 @@ requirements:
     - scipy
     - seaborn
     - tifffile
-    - vollseg-napari    
+    - vollseg-napari
 
 test:
   imports:
