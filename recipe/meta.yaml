@@ -1,5 +1,5 @@
 {% set name = "oneat" %}
-{% set version = "6.7.6" %}
+{% set version = "6.7.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/oneat-{{ version }}.tar.gz
-  sha256: 94b515491385418ce1924a78a6b4c3130a24dccbef4483a9012057740860d8b2
+  sha256: 69a7bc581906ba2ef97b1f47ddd1019f5a236950e4884efea28a268d2a727b27
 
 build:
   noarch: python
