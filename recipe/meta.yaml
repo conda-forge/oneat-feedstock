@@ -6,18 +6,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/oneat-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/oneat-{{ version }}.tar.gz
   sha256: 6e8939f9d8e4bd636528cd12e139f9c80f8e6057c7d7ad84f5258ce31a3adc48
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools-scm
   run:
     - caped-ai-metrics
@@ -30,7 +30,7 @@ requirements:
     - natsort
     - oneat-augmentations
     - pydot
-    - python >=3.8
+    - python >={{ python_min }}
     - python-graphviz
     - pandas
     - scikit-learn
@@ -47,6 +47,7 @@ test:
     # - pip check  # Fails due to opencv-python-headless and sklearn
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/Kapoorlabs-CAPED/oneat
